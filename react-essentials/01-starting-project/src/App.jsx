@@ -1,3 +1,5 @@
+import { CORE_CONCEPTS } from "./data";
+
 const reactDescription=["Fundamental","Crucial","Core"]
 function genRandom(max){
   return Math.floor(Math.random()*(max+1))
@@ -19,13 +21,37 @@ function Header() {
     </header>
   );
 }
-
+function CoreConecpt({image,title,description}){
+  return(
+    <li>
+      <img src={image} alt={title}/>
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </li>
+  )
+}
 function App() {
   return (
     <div>
       <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+        <h2>Core concepts</h2>
+        <ul>
+          <CoreConecpt
+          {...CORE_CONCEPTS[0]}
+          />
+          <CoreConecpt
+          {...CORE_CONCEPTS[1]}
+          />
+          <CoreConecpt
+          {...CORE_CONCEPTS[2]}
+          />
+          <CoreConecpt
+          {...CORE_CONCEPTS[3]}
+          />
+        </ul>
+        </section>
       </main>
     </div>
   );
