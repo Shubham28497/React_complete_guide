@@ -3,9 +3,10 @@ import Header from "./components/Header";
 import TabButton from "./components/TabButton";
 import CoreConecpt from "./components/CoreConcept";
 import { useState } from "react";
+import { EXAMPLES } from "./data";
 
 function App() {
-  const [tableContent, setTabelContent] = useState("Please click on button");
+  const [tableContent, setTabelContent] = useState("components");
   // let tableContent="Please select a button"
   function handleClick(selectedItems) {
     setTabelContent(selectedItems);
@@ -44,7 +45,13 @@ function App() {
               label="State"
             ></TabButton>
           </menu>
-          {tableContent}
+          <div id="tab-content">
+            <h3>{EXAMPLES[tableContent].title}</h3>
+            <p>{EXAMPLES[tableContent].description}</p>
+            <pre>
+              <code>{EXAMPLES[tableContent].code}</code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
