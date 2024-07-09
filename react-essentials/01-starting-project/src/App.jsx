@@ -1,26 +1,11 @@
 import { CORE_CONCEPTS } from "./data";
-
-const reactDescription=["Fundamental","Crucial","Core"]
-function genRandom(max){
-  return Math.floor(Math.random()*(max+1))
-
-}
+import Header from "./components/Header";
+import TabButton from "./components/TabButton";
 
 
 
-function Header() {
-  const description=reactDescription[genRandom(2)]
-  return (
-    <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {description} React concepts you will need for almost any app you are
-        going to build!
-      </p>
-    </header>
-  );
-}
+
+
 function CoreConecpt({image,title,description}){
   return(
     <li>
@@ -51,6 +36,12 @@ function App() {
           {...CORE_CONCEPTS[3]}
           />
         </ul>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+          </menu>
         </section>
       </main>
     </div>
