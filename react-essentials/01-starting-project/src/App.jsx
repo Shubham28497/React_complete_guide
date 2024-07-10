@@ -29,18 +29,22 @@ function App() {
           <h2>Examples</h2>
           <menu>
             <TabButton
+            isSelected={tableContent=='components'}
               onSelect={() => handleClick("components")}
               label="Components"
             ></TabButton>
             <TabButton
+            isSelected={tableContent=='jsx'}
               onSelect={() => handleClick("jsx")}
               label="JSX"
             ></TabButton>
             <TabButton
+            isSelected={tableContent=='props'}
               onSelect={() => handleClick("props")}
               label="Props"
             ></TabButton>
             <TabButton
+            isSelected={tableContent=='state'}
               onSelect={() => handleClick("state")}
               label="State"
             ></TabButton>
