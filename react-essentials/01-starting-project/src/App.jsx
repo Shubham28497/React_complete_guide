@@ -19,10 +19,11 @@ function App() {
         <section id="core-concepts">
           <h2>Core concepts</h2>
           <ul>
-            <CoreConecpt {...CORE_CONCEPTS[0]} />
+            {CORE_CONCEPTS.map((conceptItem)=><CoreConecpt key={conceptItem.title} {...conceptItem}/>)}
+            {/* <CoreConecpt {...CORE_CONCEPTS[0]} />
             <CoreConecpt {...CORE_CONCEPTS[1]} />
             <CoreConecpt {...CORE_CONCEPTS[2]} />
-            <CoreConecpt {...CORE_CONCEPTS[3]} />
+            <CoreConecpt {...CORE_CONCEPTS[3]} /> */}
           </ul>
         </section>
         <section id="examples">
